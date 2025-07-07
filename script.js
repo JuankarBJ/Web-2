@@ -40,3 +40,18 @@ function actualizarImagen() {
     const console = document.getElementById('console');
     console.innerHTML = imagenActual;
 }
+
+// --- NUEVO CÓDIGO PARA EL MENÚ DESPLEGABLE ---
+
+// 1. Seleccionamos el botón que controla el desplegable
+const botonDesplegable = document.querySelector('.boton-desplegable');
+
+// 2. Añadimos un "escuchador de eventos" para el clic
+botonDesplegable.addEventListener('click', () => {
+    // 3. Buscamos el elemento padre (el <li> con la clase 'desplegable')
+    const itemDesplegable = botonDesplegable.parentElement;
+    
+    // 4. "Alternamos" la clase 'activo'. 
+    // Si la tiene, se la quita. Si no la tiene, se la pone.
+    itemDesplegable.classList.toggle('activo');
+});

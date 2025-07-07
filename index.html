@@ -6,21 +6,51 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="contenedor-principal">
 
-    <h2>Alternar entre dos imágenes locales</h2>
-    <div id="marco">
-    <img id="miImagen" src="media/img/img_1.png" alt="Imagen 1" width="250">
-    <br>
+        <aside class="barra-lateral">
+            <div class="titulo-sidebar">
+                <h3>Menú</h3>
+            </div>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#">🏠 Inicio</a></li>
+                    <li><a href="#">📈 Estadística</a></li>
+
+                    <li class="desplegable">
+                        <button class="boton-desplegable">
+                            Galería
+                            <span class="flecha">▼</span>
+                        </button>
+                        <div class="menu-desplegable">
+                            <a href="#">Crear</a>
+                            <a href="#">Editar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </li>
+
+                    <li><a href="#">⚙️ Ajustes</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenido-principal">
+            <h2>Alternar entre dos imágenes locales</h2>
+            <div id="marco">
+            <img id="miImagen" src="media/img/img_1.png" alt="Imagen 1" width="250">
+            <br>
+            </div>
+            <p id="console">console log</p>
+            <br><br>
+
+            <button onclick="cambiarImagen()">Cambiar Imagen</button><br><br>
+            
+            <button onclick="moverImagen(-1)">⬅️ Anterior</button>
+            <button onclick="moverImagen(1)">Siguiente ➡️</button>
+        </main>
     </div>
-    <p id="console">console log</p>
-    <br><br>
-
-    <button onclick="cambiarImagen()">Cambiar Imagen</button><br><br>
-    
-    <button onclick="moverImagen(-1)">⬅️ Anterior</button>
-    <button onclick="moverImagen(1)">Siguiente ➡️</button>
-
+        
     <script src="script.js"></script>
-
+    
 </body>
 </html>
