@@ -2,22 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página GitHub Pages</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cambiar Imagen Local</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>¡Hola Mundo desde GitHub Pages!</h1>
-    </header>
-    <main>
-        <p>Esta es mi primera página web publicada usando GitHub Pages.</p>
-        <p>¡Espero que disfrutes explorando esto!</p>
-        <img src="media/img/img 1.png">
-    </main>
-    <footer>
-        <p>&copy; 2025 Juan Carlos BJ</p>
-    </footer>
+
+    <h2>Alternar entre dos imágenes locales</h2>
+    <div id="marco">
+    <img id="miImagen" src="media/img/img_1.png" alt="Imagen 1" width="250">
+    <br>
+    </div>
+    <p id="console">console log</p>
+    <br><br>
+
+    <button onclick="cambiarImagen()">Cambiar Imagen</button><br><br>
+    
+    <button onclick="moverImagen(-1)">⬅️ Anterior</button>
+    <button onclick="moverImagen(1)">Siguiente ➡️</button>
+
     <script src="script.js"></script>
+
 </body>
 </html>

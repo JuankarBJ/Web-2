@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #7589a7;
+    color: #333;
+    text-align: center;
+}
+
+
+
+#miImagen {
+    border: solid    20px    rgb(22, 13, 13);
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#marco {
+    border:solid 5px salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
