@@ -55,3 +55,15 @@ botonDesplegable.addEventListener('click', () => {
     // Si la tiene, se la quita. Si no la tiene, se la pone.
     itemDesplegable.classList.toggle('activo');
 });
+
+// --- NUEVO CÓDIGO PARA EL MENÚ EN MÓVILES ---
+
+// 1. Seleccionamos los nuevos elementos
+const botonMenu = document.getElementById('boton-menu');
+const barraLateral = document.querySelector('.barra-lateral');
+
+// 2. Añadimos un escuchador de eventos al botón de hamburguesa
+botonMenu.addEventListener('click', () => {
+    // 3. Alternamos la clase 'abierta' en la barra lateral
+    barraLateral.classList.toggle('abierta');
+});

@@ -93,3 +93,48 @@ body {
     align-items: center;
     height: 300px;
 }
+
+/* --- ESTILOS PARA MÓVILES Y PANTALLAS PEQUEÑAS --- */
+/* Estos estilos solo se aplican si la pantalla mide 768px de ancho o menos */
+@media (max-width: 768px) {
+    
+    /* 1. Ocultamos la barra lateral moviéndola fuera de la pantalla */
+    .barra-lateral {
+        position: fixed;
+        left: -100%; /* La movemos completamente a la izquierda */
+        top: 0;
+        z-index: 1000; /* La ponemos por encima de todo */
+        transition: left 0.3s ease-in-out; /* Animación suave */
+    }
+
+    /* 2. Creamos una clase 'abierta' que la hará visible */
+    .barra-lateral.abierta {
+        left: 0; /* La trae de vuelta a su posición original */
+    }
+
+    /* 3. Hacemos que el contenido principal ocupe todo el ancho */
+    .contenido-principal {
+        margin-left: 0; /* Quitamos el margen que le dimos antes */
+    }
+    
+    /* 4. Mostramos el botón de hamburguesa que estaba oculto */
+    .boton-hamburguesa {
+        display: block; /* Lo hacemos visible */
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001; /* Encima de la barra lateral */
+        background-color: #34495e;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* Ocultamos el botón de hamburguesa en pantallas grandes */
+.boton-hamburguesa {
+    display: none;
+}
